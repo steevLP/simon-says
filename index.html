@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Simon Says</title>
+        <link rel="stylesheet" href="/styles/main.css">
+    </head>
+    <body>
+        <div style="display: flex; justify-content:center; align-items: center;">
+            <div style="position: absolute; margin-top: 30pt;">
+                <h1 style="font-size: 80pt; line-height: 85px;">
+                    <span>
+                        <span style="color:#c0392b">S</span><span style="color: #2980b9;">I</span><span style="color: #27ae60;">M</span><span style="color: #f39c12;">O</span><span>N</span>
+                    </span>
+                    <br>
+                    <span style="margin-left: 40pt">
+                        <span style="color: #c0392b;">S</span><span style="color: #2980b9;">a</span><span style="color: #27ae60;">y</span><span style="color: #f39c12;">s</span>
+                    </span>
+                </h1>
+            </div>
+        </div>
+        <div style="display: flex; justify-content:center; align-items: center;margin: 5%;">
+            <div class="board">
+                <button id="btn-red" class="btn btn-red"></button>
+                <button id="btn-green" class="btn btn-green"></button>
+                <button id="btn-blue" class="btn btn-blue"></button>
+                <button id="btn-yellow" class="btn btn-yellow"></button>
+            </div>
+            <span class="display" style="position: absolute; background-color: #0c1013;" id="points">0</span>
+        </div>
+        <h1 style="text-align: center;" id="status"></h1>
+        <hr>
+        <span>Username: <input type="text" name="username" id="username" class="styled-input"></span>
+        <div>
+            <h1 style="text-align: center;">Top Scores</h1>
+            <div style="display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
+            grid-template-rows: masonry;
+            grid-gap: 1rem;">
+                <div>Username</div>
+                <div>Score</div>
+            </div>
+        </div>
+        <script src="/scripts/game_logic.js"></script>
+        <script>genStep();</script>
+    </body>
+</html>
